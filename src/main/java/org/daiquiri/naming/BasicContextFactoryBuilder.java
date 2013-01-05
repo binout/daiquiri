@@ -12,7 +12,7 @@ public class BasicContextFactoryBuilder implements InitialContextFactoryBuilder 
 
     public static BasicContext getCurrentContext() {
         if (context == null) {
-           throw new IllegalStateException("No current context, you should call new InitalContext()...");
+           throw new IllegalStateException("No current context, you should call new InitialContext()...");
         }
         return context;
     }

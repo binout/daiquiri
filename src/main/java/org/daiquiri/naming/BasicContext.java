@@ -5,152 +5,161 @@ import java.util.Hashtable;
 
 public class BasicContext implements Context {
 
+    private Hashtable<String, Object> environment;
+    private Hashtable<String, Object> namedObjects;
 
     public BasicContext(Hashtable environment) {
+        this.environment = environment;
+        this.namedObjects = new Hashtable<String, Object>();
     }
 
     @Override
     public Object lookup(Name name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Object lookup(String name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        if (!namedObjects.containsKey(name)) {
+             throw new NameNotFoundException("No entry for :" + name);
+        }
+        return namedObjects.get(name);
     }
 
     @Override
     public void bind(Name name, Object obj) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void bind(String name, Object obj) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        namedObjects.put(name, obj);
     }
 
     @Override
     public void rebind(Name name, Object obj) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void rebind(String name, Object obj) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        namedObjects.put(name, obj);
     }
 
     @Override
     public void unbind(Name name) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void unbind(String name) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        namedObjects.remove(name);
     }
 
     @Override
     public void rename(Name oldName, Name newName) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void rename(String oldName, String newName) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        Object found = lookup(oldName);
+        unbind(oldName);
+        bind(newName, found);
     }
 
     @Override
     public NamingEnumeration<NameClassPair> list(Name name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public NamingEnumeration<NameClassPair> list(String name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public NamingEnumeration<Binding> listBindings(Name name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public NamingEnumeration<Binding> listBindings(String name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void destroySubcontext(Name name) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void destroySubcontext(String name) throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Context createSubcontext(Name name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Context createSubcontext(String name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Object lookupLink(Name name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Object lookupLink(String name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return lookup(name);
     }
 
     @Override
     public NameParser getNameParser(Name name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public NameParser getNameParser(String name) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Name composeName(Name name, Name prefix) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public String composeName(String name, String prefix) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Object addToEnvironment(String propName, Object propVal) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return environment.put(propName, propVal);
     }
 
     @Override
     public Object removeFromEnvironment(String propName) throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return environment.remove(propName);
     }
 
     @Override
     public Hashtable<?, ?> getEnvironment() throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return environment;
     }
 
     @Override
     public void close() throws NamingException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        namedObjects.clear();
     }
 
     @Override
     public String getNameInNamespace() throws NamingException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 }

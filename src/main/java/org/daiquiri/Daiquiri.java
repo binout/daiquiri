@@ -20,7 +20,7 @@ public class Daiquiri {
                 }
             } else {
                 if (NamingManager.hasInitialContextFactoryBuilder()) {
-                    throw new IllegalStateException();
+                    throw new IllegalStateException("Cannot mock InitialContext because a JNDI provider is already registered.");
                 }
                 NamingManager.setInitialContextFactoryBuilder(new BasicContextFactoryBuilder());
                 isMocked = true;
