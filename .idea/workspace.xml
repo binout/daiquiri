@@ -8,12 +8,13 @@
     <ignored path="daiquiri.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357473348139" ignored="false" />
-    <file path="/pom.xml" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357473440489" ignored="false" />
+    <file path="/pom.xml" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357474545743" ignored="false" />
     <file path="/BasicContext.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467402651" ignored="false" />
     <file path="/BasicContextFactoryBuilder.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467569721" ignored="false" />
     <file path="/fragment.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357415578059" ignored="false" />
     <file path="/Daiquiri.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357468150168" ignored="false" />
     <file path="/BasicContextTest.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467932500" ignored="false" />
+    <file path="$USER_HOME$/.m2/settings.xml" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357476051672" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="26" selection-start="1324" selection-end="1324" vertical-scroll-proportion="-1.2899159">
+            <state line="149" column="70" selection-start="5804" selection-end="5804" vertical-scroll-proportion="0.3277311">
               <folding />
             </state>
           </provider>
@@ -792,7 +793,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="26" selection-start="1324" selection-end="1324" vertical-scroll-proportion="-1.2899159">
+        <state line="149" column="70" selection-start="5804" selection-end="5804" vertical-scroll-proportion="0.3277311">
           <folding />
         </state>
       </provider>
