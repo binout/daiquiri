@@ -8,13 +8,10 @@ import java.util.Hashtable;
 
 public class BasicContextFactoryBuilder implements InitialContextFactoryBuilder {
 
-    private static BasicContext context;
+    private BasicContext context;
 
-    public static BasicContext getCurrentContext() {
-        if (context == null) {
-           throw new IllegalStateException("No current context, you should call new InitialContext()...");
-        }
-        return context;
+    public void setContext(BasicContext context) {
+        this.context = context;
     }
 
     @Override
@@ -22,7 +19,7 @@ public class BasicContextFactoryBuilder implements InitialContextFactoryBuilder 
         return new InitialContextFactory() {
             @Override
             public Context getInitialContext(Hashtable<?, ?> environment) throws NamingException {
-                context = new BasicContext(environment);
+                context.setEnvironment(environment);
                 return context;
             }
         };

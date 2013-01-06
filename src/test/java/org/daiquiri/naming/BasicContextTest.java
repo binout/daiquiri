@@ -8,67 +8,48 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import javax.naming.InitialContext;
-import javax.naming.Name;
-import javax.naming.NameNotFoundException;
-import javax.naming.NamingException;
+import javax.naming.*;
 
 public class BasicContextTest {
 
-    private InitialContext context;
+    private Context mockContext;
 
     @BeforeClass
-    public void initNamingContext() throws NamingException {
+    public void check_no_factory_is_registered() throws NamingException {
         try {
-            newInitialContext();
+            InitialContext context = new InitialContext();
+            context.getEnvironment();
             Assert.fail("should fail because no context is mocked !");
         } catch (NamingException e) {
             // OK
         }
-        Naming.mockContext();
-        try {
-            Naming.clear();
-            Assert.fail("should fail because no context is built !");
-        }  catch (IllegalStateException e) {
-            // OK
-        }
-    }
-
-    private void newInitialContext() throws NamingException {
-        context = new InitialContext();
-        context.getEnvironment();
     }
 
     @BeforeMethod
-    public void clearNamingContext() throws NamingException {
-       newInitialContext();
-       Naming.clear();
-    }
-
-    @Test
-    public void can_mock_two_times() throws NamingException {
-        Naming.mockContext();
+    public void init_mock_naming_context() throws NamingException {
+        mockContext = Naming.mockInitialContext();
+        Assert.assertNotNull(mockContext);
     }
 
     @Test(expectedExceptions = UnsupportedOperationException.class, expectedExceptionsMessageRegExp = "Not supported by org.daiquiri.naming.BasicContext")
     public void can_be_instantiated_by_factory() throws NamingException {
         Name name = Mockito.mock(Name.class);
-        context.lookup(name);
+        mockContext.lookup(name);
     }
 
     @Test
     public void can_bind_object() throws NamingException {
         String name = "name";
         String value = "value";
-        Naming.bind(name, value);
+        mockContext.bind(name, value);
 
-        String found = (String) context.lookup(name);
+        String found = (String) new InitialContext().lookup(name);
 
         Assert.assertEquals(found, value);
     }
 
     @Test(expectedExceptions = NameNotFoundException.class)
     public void should_throw_exception_if_not_bound() throws NamingException {
-        context.lookup("name");
+        new InitialContext().lookup("name");
     }
 }

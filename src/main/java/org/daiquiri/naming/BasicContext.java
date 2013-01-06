@@ -8,9 +8,17 @@ public class BasicContext implements Context {
     private Hashtable<String, Object> environment;
     private Hashtable<String, Object> namedObjects;
 
+    public BasicContext() {
+        this(new Hashtable<String, Object>()) ;
+    }
+
     public BasicContext(Hashtable environment) {
-        this.environment = environment;
+        setEnvironment(environment);
         this.namedObjects = new Hashtable<String, Object>();
+    }
+
+    public void setEnvironment(Hashtable environment) {
+        this.environment = environment;
     }
 
     @Override
@@ -162,4 +170,5 @@ public class BasicContext implements Context {
     public String getNameInNamespace() throws NamingException {
         throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
+
 }
