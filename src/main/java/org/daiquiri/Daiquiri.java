@@ -1,7 +1,8 @@
 package org.daiquiri;
 
-import org.daiquiri.naming.BasicContext;
-import org.daiquiri.naming.BasicContextFactoryBuilder;
+import org.daiquiri.naming.BasicInitialContext;
+import org.daiquiri.naming.DaiquiriContext;
+import org.daiquiri.naming.DaiquiriContextFactoryBuilder;
 
 import javax.naming.Context;
 import javax.naming.NamingException;
@@ -11,17 +12,17 @@ public class Daiquiri {
 
     public static class Naming {
 
-        private static BasicContextFactoryBuilder builder;
+        private static DaiquiriContextFactoryBuilder builder;
 
         public static Context mockInitialContext() throws NamingException {
             if (builder == null) {
                 if (NamingManager.hasInitialContextFactoryBuilder()) {
                     throw new IllegalStateException("Cannot mock InitialContext because a JNDI provider is already registered.");
                 }
-                builder = new BasicContextFactoryBuilder();
+                builder = new DaiquiriContextFactoryBuilder();
                 NamingManager.setInitialContextFactoryBuilder(builder);
             }
-            BasicContext context = new BasicContext();
+            DaiquiriContext context = new BasicInitialContext();
             builder.setContext(context);
             return context;
         }

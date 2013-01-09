@@ -6,11 +6,11 @@ import javax.naming.spi.InitialContextFactory;
 import javax.naming.spi.InitialContextFactoryBuilder;
 import java.util.Hashtable;
 
-public class BasicContextFactoryBuilder implements InitialContextFactoryBuilder {
+public class DaiquiriContextFactoryBuilder implements InitialContextFactoryBuilder {
 
-    private BasicContext context;
+    private DaiquiriContext context;
 
-    public void setContext(BasicContext context) {
+    public void setContext(DaiquiriContext context) {
         this.context = context;
     }
 

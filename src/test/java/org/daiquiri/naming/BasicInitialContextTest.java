@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import javax.naming.*;
 
-public class BasicContextTest {
+public class BasicInitialContextTest {
 
     private Context mockContext;
 
@@ -31,7 +31,7 @@ public class BasicContextTest {
         Assert.assertNotNull(mockContext);
     }
 
-    @Test(expectedExceptions = UnsupportedOperationException.class, expectedExceptionsMessageRegExp = "Not supported by org.daiquiri.naming.BasicContext")
+    @Test(expectedExceptions = UnsupportedOperationException.class, expectedExceptionsMessageRegExp = "Not supported by org.daiquiri.naming.BasicInitialContext")
     public void can_be_instantiated_by_factory() throws NamingException {
         Name name = Mockito.mock(Name.class);
         mockContext.lookup(name);

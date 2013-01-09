@@ -3,27 +3,28 @@ package org.daiquiri.naming;
 import javax.naming.*;
 import java.util.Hashtable;
 
-public class BasicContext implements Context {
+public class BasicInitialContext implements DaiquiriContext {
 
     private Hashtable<String, Object> environment;
     private Hashtable<String, Object> namedObjects;
 
-    public BasicContext() {
+    public BasicInitialContext() {
         this(new Hashtable<String, Object>()) ;
     }
 
-    public BasicContext(Hashtable environment) {
+    public BasicInitialContext(Hashtable environment) {
         setEnvironment(environment);
         this.namedObjects = new Hashtable<String, Object>();
     }
 
+    @Override
     public void setEnvironment(Hashtable environment) {
         this.environment = environment;
     }
 
     @Override
     public Object lookup(Name name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
@@ -36,7 +37,7 @@ public class BasicContext implements Context {
 
     @Override
     public void bind(Name name, Object obj) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
@@ -46,7 +47,7 @@ public class BasicContext implements Context {
 
     @Override
     public void rebind(Name name, Object obj) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
@@ -56,7 +57,7 @@ public class BasicContext implements Context {
 
     @Override
     public void unbind(Name name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
@@ -66,7 +67,7 @@ public class BasicContext implements Context {
 
     @Override
     public void rename(Name oldName, Name newName) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
@@ -78,47 +79,47 @@ public class BasicContext implements Context {
 
     @Override
     public NamingEnumeration<NameClassPair> list(Name name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public NamingEnumeration<NameClassPair> list(String name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public NamingEnumeration<Binding> listBindings(Name name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public NamingEnumeration<Binding> listBindings(String name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public void destroySubcontext(Name name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public void destroySubcontext(String name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public Context createSubcontext(Name name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public Context createSubcontext(String name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public Object lookupLink(Name name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
@@ -128,22 +129,22 @@ public class BasicContext implements Context {
 
     @Override
     public NameParser getNameParser(Name name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public NameParser getNameParser(String name) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public Name composeName(Name name, Name prefix) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
     public String composeName(String name, String prefix) throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
     @Override
@@ -168,7 +169,7 @@ public class BasicContext implements Context {
 
     @Override
     public String getNameInNamespace() throws NamingException {
-        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicInitialContext");
     }
 
 }
