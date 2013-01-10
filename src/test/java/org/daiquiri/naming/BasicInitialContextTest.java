@@ -6,6 +6,7 @@ import org.mockito.Mockito;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import javax.naming.*;
@@ -14,7 +15,7 @@ public class BasicInitialContextTest {
 
     private Context mockContext;
 
-    @BeforeClass
+    @BeforeSuite
     public void check_no_factory_is_registered() throws NamingException {
         try {
             InitialContext context = new InitialContext();

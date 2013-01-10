@@ -5,12 +5,13 @@ import javax.naming.NamingException;
 import javax.naming.spi.InitialContextFactory;
 import javax.naming.spi.InitialContextFactoryBuilder;
 import java.util.Hashtable;
+import java.util.Map;
 
 public class DaiquiriContextFactoryBuilder implements InitialContextFactoryBuilder {
 
-    private DaiquiriContext context;
+    private Context context;
 
-    public void setContext(DaiquiriContext context) {
+    public void setContext(Context context) {
         this.context = context;
     }
 
@@ -19,7 +20,9 @@ public class DaiquiriContextFactoryBuilder implements InitialContextFactoryBuild
         return new InitialContextFactory() {
             @Override
             public Context getInitialContext(Hashtable<?, ?> environment) throws NamingException {
-                context.setEnvironment(environment);
+                for (Map.Entry<?,?> propEntries : environment.entrySet())  {
+                    context.addToEnvironment((String)propEntries.getKey(), propEntries.getValue());
+                }
                 return context;
             }
         };

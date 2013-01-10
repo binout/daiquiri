@@ -3,7 +3,7 @@ package org.daiquiri.naming;
 import javax.naming.*;
 import java.util.Hashtable;
 
-public class BasicInitialContext implements DaiquiriContext {
+public class BasicInitialContext implements Context {
 
     private Hashtable<String, Object> environment;
     private Hashtable<String, Object> namedObjects;
@@ -12,14 +12,9 @@ public class BasicInitialContext implements DaiquiriContext {
         this(new Hashtable<String, Object>()) ;
     }
 
-    public BasicInitialContext(Hashtable environment) {
-        setEnvironment(environment);
-        this.namedObjects = new Hashtable<String, Object>();
-    }
-
-    @Override
-    public void setEnvironment(Hashtable environment) {
+    public BasicInitialContext(Hashtable<String, Object> environment) {
         this.environment = environment;
+        this.namedObjects = new Hashtable<String, Object>();
     }
 
     @Override
