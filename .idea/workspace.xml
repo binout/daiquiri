@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" name="Default" comment="" />
     <ignored path="daiquiri.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1358002073660" ignored="false" />
@@ -115,7 +111,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="32" selection-start="4134" selection-end="4134" vertical-scroll-proportion="0.7303371">
+            <state line="100" column="13" selection-start="3769" selection-end="3769" vertical-scroll-proportion="-2.1011236">
               <folding />
             </state>
           </provider>
@@ -959,7 +955,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="32" selection-start="4134" selection-end="4134" vertical-scroll-proportion="0.7303371">
+        <state line="100" column="13" selection-start="3769" selection-end="3769" vertical-scroll-proportion="-2.1011236">
           <folding />
         </state>
       </provider>
