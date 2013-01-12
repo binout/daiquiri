@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContextFactoryBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicDirContext.java" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicInitialDirContext.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicDirContextTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicInitialDirContextTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockDirContextTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockInitialDirContextTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="daiquiri.iws" />
@@ -18,7 +13,7 @@
     <file path="/BasicContext.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467402651" ignored="false" />
     <file path="/BasicContextFactoryBuilder.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467569721" ignored="false" />
     <file path="/fragment.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357803700515" ignored="false" />
-    <file path="/Daiquiri.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1358002329741" ignored="false" />
+    <file path="/Daiquiri.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1358009840307" ignored="false" />
     <file path="/BasicContextTest.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467932500" ignored="false" />
     <file path="$USER_HOME$/.m2/settings.xml" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357476051672" ignored="false" />
     <file path="/BasicInitialContext.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357802762221" ignored="false" />
@@ -117,10 +112,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="26" selection-start="4174" selection-end="4174" vertical-scroll-proportion="0.0">
+            <state line="109" column="32" selection-start="4134" selection-end="4134" vertical-scroll-proportion="0.7303371">
               <folding />
             </state>
           </provider>
@@ -158,16 +153,16 @@
       <file leaf-file-name="DaiquiriInitialContextFactoryBuilder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="45" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
+            <state line="23" column="17" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Daiquiri.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Daiquiri.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="69" selection-start="510" selection-end="510" vertical-scroll-proportion="-0.505618">
+            <state line="72" column="32" selection-start="2833" selection-end="2833" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -229,7 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicContextFactoryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicInitialContextFactoryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/MockedContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContext.java" />
@@ -242,9 +236,10 @@
         <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicInitialDirContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockInitialDirContextTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -409,36 +404,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="daiquiri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="daiquiri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="daiquiri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="naming" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -447,15 +412,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="OverrideImplement.combined" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -761,6 +730,24 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" name="Default" comment="" />
@@ -903,13 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="26" selection-start="4174" selection-end="4174" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
@@ -949,13 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicInitialDirContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
@@ -970,9 +943,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="69" selection-start="510" selection-end="510" vertical-scroll-proportion="-0.505618">
+        <state line="72" column="32" selection-start="2833" selection-end="2833" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="32" selection-start="4134" selection-end="4134" vertical-scroll-proportion="0.7303371">
           <folding />
         </state>
       </provider>
