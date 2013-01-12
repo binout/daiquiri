@@ -7,7 +7,7 @@ import javax.naming.spi.InitialContextFactoryBuilder;
 import java.util.Hashtable;
 import java.util.Map;
 
-public class DaiquiriContextFactoryBuilder implements InitialContextFactoryBuilder {
+public class DaiquiriInitialContextFactoryBuilder implements InitialContextFactoryBuilder {
 
     private Context context;
 

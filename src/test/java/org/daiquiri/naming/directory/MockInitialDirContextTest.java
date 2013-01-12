@@ -13,7 +13,7 @@ import javax.naming.NamingException;
 import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
 
-public class MockDirContextTest {
+public class MockInitialDirContextTest {
 
     @Mock
     private DirContext mockContext;
@@ -28,7 +28,7 @@ public class MockDirContextTest {
         String hello = "Hi Mockito !";
         Mockito.when(mockContext.lookup(Matchers.anyString())).thenReturn(hello);
 
-        Daiquiri.Naming.mockDirContext(mockContext);
+        Daiquiri.Naming.mockInitialDirContext(mockContext);
 
         DirContext context = new InitialDirContext();
         Assert.assertEquals(context.lookup("hello"), hello);

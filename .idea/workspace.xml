@@ -2,32 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicDirContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicDirContextTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockDirContextTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContext.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicInitialContext.java" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicInitialContext.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContextFactoryBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicDirContext.java" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicInitialDirContext.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicDirContextTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicInitialDirContextTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockDirContextTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockInitialDirContextTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContextFactoryBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContextFactoryBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="daiquiri.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357802461688" ignored="false" />
+    <file path="/Dummy.txt" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1358002073660" ignored="false" />
     <file path="/pom.xml" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357479590005" ignored="false" />
     <file path="/BasicContext.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467402651" ignored="false" />
     <file path="/BasicContextFactoryBuilder.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467569721" ignored="false" />
     <file path="/fragment.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357803700515" ignored="false" />
-    <file path="/Daiquiri.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357802961945" ignored="false" />
+    <file path="/Daiquiri.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1358002329741" ignored="false" />
     <file path="/BasicContextTest.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467932500" ignored="false" />
     <file path="$USER_HOME$/.m2/settings.xml" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357476051672" ignored="false" />
     <file path="/BasicInitialContext.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357802762221" ignored="false" />
     <file path="/DaiquiriInitialContextFactoryBuilder.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357764625748" ignored="false" />
     <file path="/DaiquiriContext.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357764638387" ignored="false" />
     <file path="/BasicDirContext.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357802501204" ignored="false" />
-    <file path="/BasicInitialContextTest.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357765014707" ignored="false" />
+    <file path="/BasicInitialContextTest.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1358003079400" ignored="false" />
     <file path="/BasicDirContextTest.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357765307372" ignored="false" />
     <file path="/DaiquiriContextFactoryBuilder.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357802748767" ignored="false" />
     <file path="/MockInitialContextTest.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357803750868" ignored="false" />
@@ -140,8 +138,10 @@
       <file leaf-file-name="BasicInitialContextTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="12" selection-start="355" selection-end="388" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="78" column="41" selection-start="2530" selection-end="2530" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#2797#2813#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,28 +155,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DaiquiriContextFactoryBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContextFactoryBuilder.java">
+      <file leaf-file-name="DaiquiriInitialContextFactoryBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
+            <state line="13" column="45" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Daiquiri.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Daiquiri.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="33" selection-start="1949" selection-end="1949" vertical-scroll-proportion="0.0">
+            <state line="16" column="69" selection-start="510" selection-end="510" vertical-scroll-proportion="-0.505618">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MockInitialContextTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MockInitialContextTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="19" selection-start="707" selection-end="707" vertical-scroll-proportion="0.42696628">
+            <state line="24" column="9" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,8 +184,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MockDirContextTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockDirContextTest.java">
+      <file leaf-file-name="MockInitialDirContextTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockInitialDirContextTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="13" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
               <folding />
@@ -193,17 +193,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicDirContextTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicDirContextTest.java">
+      <file leaf-file-name="BasicInitialDirContextTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicInitialDirContextTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="249" selection-end="532" vertical-scroll-proportion="0.0">
+            <state line="9" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicDirContext.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicDirContext.java">
+      <file leaf-file-name="BasicInitialDirContext.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicInitialDirContext.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
               <folding />
@@ -229,22 +229,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicContextTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicContextFactoryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicInitialContextFactoryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/MockedContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicDirContext.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicDirContextTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContextFactoryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicDirContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicInitialContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockDirContextTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicInitialDirContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockInitialDirContextTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java" />
       </list>
     </option>
   </component>
@@ -349,6 +349,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="naming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daiquiri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daiquiri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -417,15 +447,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -435,7 +465,7 @@
       <recent name="org.daiquiri" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+  <component name="RunManager" selected="TestNG.BasicInitialContextTest">
     <configuration default="false" name="BasicInitialContextTest" type="TestNG" factoryName="TestNG" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -471,7 +501,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="BasicDirContextTest" type="TestNG" factoryName="TestNG" temporary="true">
+    <configuration default="false" name="BasicInitialDirContextTest" type="TestNG" factoryName="TestNG" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="org.daiquiri.naming.directory.*" />
@@ -483,7 +513,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="org.daiquiri.naming.directory" />
-      <option name="MAIN_CLASS_NAME" value="org.daiquiri.naming.directory.BasicDirContextTest" />
+      <option name="MAIN_CLASS_NAME" value="org.daiquiri.naming.directory.BasicInitialDirContextTest" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -632,6 +662,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -658,19 +701,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -711,18 +741,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="TestNG.BasicInitialContextTest" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.BasicDirContextTest" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.BasicInitialDirContextTest" />
       <item index="2" class="java.lang.String" itemvalue="TestNG.MockInitialContextTest" />
       <item index="3" class="java.lang.String" itemvalue="TestNG.MockInitialContextTest.can_use_mock_dir_context" />
       <item index="4" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.MockInitialContextTest.can_use_mock_dir_context" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.MockInitialContextTest" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.BasicDirContextTest" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.BasicInitialContextTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.BasicInitialContextTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.&lt;default&gt;" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.MockInitialContextTest.can_use_mock_dir_context" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.MockInitialContextTest" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.BasicInitialDirContextTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -741,11 +771,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="72" y="22" width="1368" height="860" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -760,11 +791,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884097" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -846,7 +876,9 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="1" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#2797#2813#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -857,7 +889,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContextFactoryBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="26" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0">
           <folding />
@@ -885,16 +917,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicDirContext.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+        <state line="24" column="9" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockInitialDirContextTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicInitialDirContextTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="355" selection-end="388" vertical-scroll-proportion="0.0">
+        <state line="78" column="41" selection-start="2530" selection-end="2530" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2797#2813#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="45" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/directory/BasicInitialDirContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -906,40 +970,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriContextFactoryBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/Daiquiri.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="33" selection-start="1949" selection-end="1949" vertical-scroll-proportion="0.0">
+        <state line="16" column="69" selection-start="510" selection-end="510" vertical-scroll-proportion="-0.505618">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/BasicDirContextTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="249" selection-end="532" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockDirContextTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/MockInitialContextTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="19" selection-start="707" selection-end="707" vertical-scroll-proportion="0.42696628">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -1,7 +1,6 @@
 package org.daiquiri.naming;
 
 import org.daiquiri.Daiquiri;
-import org.daiquiri.naming.directory.BasicDirContext;
 import org.mockito.Matchers;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -12,8 +11,6 @@ import org.testng.annotations.Test;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.naming.directory.DirContext;
-import javax.naming.directory.InitialDirContext;
 
 public class MockInitialContextTest {
 
