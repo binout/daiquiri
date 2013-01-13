@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="870035af-a749-459b-bd92-a211b21479e8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="870035af-a749-459b-bd92-a211b21479e8" name="Default" comment="" />
     <ignored path="daiquiri-site.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="870035af-a749-459b-bd92-a211b21479e8" time="1358084199903" ignored="false" />
