@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" name="Default" comment="" />
+    <list default="true" id="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="daiquiri.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1358070923507" ignored="false" />
+    <file path="/Dummy.txt" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1358073084233" ignored="false" />
     <file path="/pom.xml" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1358071743285" ignored="false" />
     <file path="/BasicContext.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467402651" ignored="false" />
     <file path="/BasicContextFactoryBuilder.java" changelist="9bc7efe4-5c66-4e1c-ab06-c0addedddeec" time="1357467569721" ignored="false" />
@@ -134,10 +137,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="8" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.0">
+            <state line="6" column="16" selection-start="374" selection-end="374" vertical-scroll-proportion="0.1331361">
               <folding />
             </state>
           </provider>
@@ -152,10 +155,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MockInitialDirContextTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MockInitialDirContextTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockInitialDirContextTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="13" selection-start="638" selection-end="638" vertical-scroll-proportion="0.021770682">
+            <state line="15" column="13" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,9 +168,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicInitialContext.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="14" column="56" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -324,9 +325,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -533,19 +534,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -572,6 +560,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -660,7 +661,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="72" y="22" width="1368" height="860" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -678,7 +679,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -759,9 +760,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/DaiquiriInitialContextFactoryBuilder.java">
@@ -816,9 +815,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/daiquiri/naming/BasicInitialContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="56" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -845,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="8" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/BasicInitialContextTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="41" selection-start="2708" selection-end="2708" vertical-scroll-proportion="0.0">
@@ -861,7 +851,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/daiquiri/naming/directory/MockInitialDirContextTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="638" selection-end="638" vertical-scroll-proportion="0.021770682">
+        <state line="15" column="13" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="374" selection-end="374" vertical-scroll-proportion="0.1331361">
           <folding />
         </state>
       </provider>
