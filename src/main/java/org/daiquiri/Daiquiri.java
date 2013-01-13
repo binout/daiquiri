@@ -15,6 +15,7 @@
  */
 package org.daiquiri;
 
+import org.daiquiri.exception.DaiquiriException;
 import org.daiquiri.naming.BasicInitialContext;
 import org.daiquiri.naming.DaiquiriInitialContextFactoryBuilder;
 import org.daiquiri.naming.directory.BasicInitialDirContext;
@@ -23,11 +24,52 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.naming.directory.InitialDirContext;
 import javax.naming.spi.NamingManager;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Main class for Daiquiri utilities
  */
 public class Daiquiri {
+
+    /**
+     * All about reflection
+     */
+    public static class Reflect {
+
+        /**
+         * New instance of given class
+         * @param clazz the class to instantiate
+         * @param <T> the type
+         * @param parameters the parameters of constructor
+         * @return a object with type <T> of class clazz
+         * @throws DaiquiriException
+         */
+        public static <T> T newInstance(Class<T> clazz, Object... parameters) throws DaiquiriException {
+            try {
+                if (parameters == null || parameters.length == 0) {
+                    return clazz.newInstance();
+                } else {
+                    List<Class<?>> parameterTypes = new ArrayList<Class<?>>();
+                    for (Object p : parameters) {
+                        parameterTypes.add(p.getClass());
+                    }
+                    Constructor<T> constructor = clazz.getConstructor(parameterTypes.toArray(new Class<?>[0]));
+                    return constructor.newInstance(parameters);
+                }
+            } catch (InstantiationException e) {
+                throw new DaiquiriException(e);
+            } catch (IllegalAccessException e) {
+                throw new DaiquiriException(e);
+            } catch (NoSuchMethodException e) {
+                throw new DaiquiriException(e);
+            } catch (InvocationTargetException e) {
+                throw new DaiquiriException(e);
+            }
+        }
+    }
 
     /**
      * All about mocking javax.naming
