@@ -24,6 +24,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
@@ -44,7 +45,7 @@ public class MockInitialContextTest {
 
         Daiquiri.Naming.mockInitialContext(mockContext);
 
-        InitialContext context = new InitialContext();
+        Context context = new InitialContext();
         Assert.assertEquals(context.lookup("hello"), hello);
     }
 }

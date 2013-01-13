@@ -29,12 +29,12 @@ import java.util.Hashtable;
 
 public class BasicInitialContextTest {
 
-    private Context mockContext;
+    private InitialContext mockContext;
 
     @BeforeSuite
     public void check_no_factory_is_registered() throws NamingException {
         try {
-            InitialContext context = new InitialContext();
+            Context context = new InitialContext();
             context.getEnvironment();
             Assert.fail("should fail because no context is mocked !");
         } catch (NamingException e) {
@@ -104,7 +104,7 @@ public class BasicInitialContextTest {
         String earth = "earth";
         environment.put(home, earth);
 
-        InitialContext context = new InitialContext(environment);
+        Context context = new InitialContext(environment);
 
         Assert.assertNotNull(context.getEnvironment());
         Assert.assertEquals(1, context.getEnvironment().size());

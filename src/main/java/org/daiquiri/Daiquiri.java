@@ -23,6 +23,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.naming.directory.DirContext;
+import javax.naming.directory.InitialDirContext;
 import javax.naming.spi.NamingManager;
 
 /**
@@ -43,7 +44,7 @@ public class Daiquiri {
          * @return the mocked context
          * @throws NamingException exception throw if a problem with jndi provider
          */
-        public static Context mockInitialContext(InitialContext mockContext) throws NamingException {
+        public static InitialContext mockInitialContext(InitialContext mockContext) throws NamingException {
             initContextFactoryBuilder();
             daiquiriBuilder.setContext(mockContext);
             return mockContext;
@@ -54,9 +55,9 @@ public class Daiquiri {
          * @return the mocked context
          * @throws NamingException exception throw if a problem with jndi provider
          */
-        public static Context mockInitialContext() throws NamingException {
+        public static InitialContext mockInitialContext() throws NamingException {
             initContextFactoryBuilder();
-            Context context = new BasicInitialContext();
+            InitialContext context = new BasicInitialContext();
             daiquiriBuilder.setContext(context);
             return context;
         }
@@ -76,9 +77,9 @@ public class Daiquiri {
          * @return the mocked dircontext
          * @throws NamingException exception throw if a problem with jndi provider
          */
-        public static DirContext mockInitialDirContext() throws NamingException {
+        public static InitialDirContext mockInitialDirContext() throws NamingException {
             initContextFactoryBuilder();
-            BasicInitialDirContext context = new BasicInitialDirContext();
+            InitialDirContext context = new BasicInitialDirContext();
             daiquiriBuilder.setContext(context);
             return context;
         }
@@ -89,7 +90,7 @@ public class Daiquiri {
          * @return the mocked dircontext
          * @throws NamingException exception throw if a problem with jndi provider
          */
-        public static DirContext mockInitialDirContext(DirContext mockDirContext) throws NamingException {
+        public static InitialDirContext mockInitialDirContext(InitialDirContext mockDirContext) throws NamingException {
             initContextFactoryBuilder();
             daiquiriBuilder.setContext(mockDirContext);
             return mockDirContext;

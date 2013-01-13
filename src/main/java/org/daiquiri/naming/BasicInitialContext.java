@@ -18,16 +18,16 @@ package org.daiquiri.naming;
 import javax.naming.*;
 import java.util.Hashtable;
 
-public class BasicInitialContext implements Context {
+public class BasicInitialContext extends InitialContext {
 
     private Hashtable<String, Object> environment;
     private Hashtable<String, Object> namedObjects;
 
-    public BasicInitialContext() {
+    public BasicInitialContext() throws  NamingException {
         this(new Hashtable<String, Object>()) ;
     }
 
-    public BasicInitialContext(Hashtable<String, Object> environment) {
+    public BasicInitialContext(Hashtable<String, Object> environment) throws  NamingException {
         this.environment = environment;
         this.namedObjects = new Hashtable<String, Object>();
     }

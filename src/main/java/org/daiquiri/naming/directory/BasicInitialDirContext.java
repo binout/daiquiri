@@ -22,7 +22,10 @@ import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
 import javax.naming.directory.*;
 
-public class BasicInitialDirContext extends BasicInitialContext implements DirContext {
+public class BasicInitialDirContext extends InitialDirContext {
+
+    public BasicInitialDirContext() throws  NamingException{
+    }
 
     @Override
     public Attributes getAttributes(Name name) throws NamingException {

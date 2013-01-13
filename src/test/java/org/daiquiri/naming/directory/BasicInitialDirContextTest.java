@@ -21,10 +21,11 @@ import org.testng.annotations.Test;
 
 import javax.naming.NamingException;
 import javax.naming.directory.DirContext;
+import javax.naming.directory.InitialDirContext;
 
 public class BasicInitialDirContextTest {
 
-    private DirContext mockContext;
+    private InitialDirContext mockContext;
 
     @Test
     public void init_mock_dir_context() throws NamingException {

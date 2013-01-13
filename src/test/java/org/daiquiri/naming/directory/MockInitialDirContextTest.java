@@ -31,7 +31,7 @@ import javax.naming.directory.InitialDirContext;
 public class MockInitialDirContextTest {
 
     @Mock
-    private DirContext mockContext;
+    private InitialDirContext mockContext;
 
     @BeforeMethod
     public void initMockito() {
