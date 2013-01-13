@@ -19,10 +19,8 @@ import org.daiquiri.naming.BasicInitialContext;
 import org.daiquiri.naming.DaiquiriInitialContextFactoryBuilder;
 import org.daiquiri.naming.directory.BasicInitialDirContext;
 
-import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.naming.directory.DirContext;
 import javax.naming.directory.InitialDirContext;
 import javax.naming.spi.NamingManager;
 
@@ -45,7 +43,7 @@ public class Daiquiri {
          * @throws NamingException exception throw if a problem with jndi provider
          */
         public static InitialContext mockInitialContext(InitialContext mockContext) throws NamingException {
-            initContextFactoryBuilder();
+            initInitialContextFactoryBuilder();
             daiquiriBuilder.setContext(mockContext);
             return mockContext;
         }
@@ -56,16 +54,16 @@ public class Daiquiri {
          * @throws NamingException exception throw if a problem with jndi provider
          */
         public static InitialContext mockInitialContext() throws NamingException {
-            initContextFactoryBuilder();
+            initInitialContextFactoryBuilder();
             InitialContext context = new BasicInitialContext();
             daiquiriBuilder.setContext(context);
             return context;
         }
 
-        private static void initContextFactoryBuilder() throws NamingException {
+        private static void initInitialContextFactoryBuilder() throws NamingException {
             if (daiquiriBuilder == null) {
                 if (NamingManager.hasInitialContextFactoryBuilder()) {
-                    throw new IllegalStateException("Cannot mock InitialContext because a JNDI provider is already registered.");
+                    throw new IllegalStateException("Cannot mock InitialContextFactoryBuilder because a JNDI provider is already registered.");
                 }
                 daiquiriBuilder = new DaiquiriInitialContextFactoryBuilder();
                 NamingManager.setInitialContextFactoryBuilder(daiquiriBuilder);
@@ -78,7 +76,7 @@ public class Daiquiri {
          * @throws NamingException exception throw if a problem with jndi provider
          */
         public static InitialDirContext mockInitialDirContext() throws NamingException {
-            initContextFactoryBuilder();
+            initInitialContextFactoryBuilder();
             InitialDirContext context = new BasicInitialDirContext();
             daiquiriBuilder.setContext(context);
             return context;
@@ -91,7 +89,7 @@ public class Daiquiri {
          * @throws NamingException exception throw if a problem with jndi provider
          */
         public static InitialDirContext mockInitialDirContext(InitialDirContext mockDirContext) throws NamingException {
-            initContextFactoryBuilder();
+            initInitialContextFactoryBuilder();
             daiquiriBuilder.setContext(mockDirContext);
             return mockDirContext;
         }
