@@ -4,27 +4,58 @@
     <title>Daiquiri</title>
     <meta charset='utf-8'>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.js"></script>
 </head>
 <body>
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand">Daiquiri</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="active"><a>Home</a></li>
+                        <li class="dropdown">
+                            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Download<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                <li><a tabindex="-1" target="_blank" href="http://repository-binout.forge.cloudbees.com/snapshot/org/daiquiri/daiquiri/">Snapshot</a></li>
+                                <li><a tabindex="-1" target="_blank" href="http://repository-binout.forge.cloudbees.com/release/org/daiquiri/daiquiri/">Release</a></li>
+                            </ul>
+                        </li>
+                        <li><a target="_blank" href="https://github.com/binout/daiquiri">GitHub</a></li>
+                        <li><a target="_blank" href="https://github.com/binout/daiquiri-examples">Examples</a></li>
+                        <li><a target="_blank" href="https://buildhive.cloudbees.com/job/binout/job/daiquiri/">BuildHive</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="page-header">
             <h1>
                 <img height="10%" width="10%" src="img/daiquiri.jpg"/>
-                Daiquiri
+                Daiquiri<small>, utility for java unit testing</small>
             </h1>
         </div>
         <div class="row">
             <div class="span5"><h3>Why drink it?</h3>
-                You can drink Daiquiri when you cannot mock using your favorite cocktail.<br/>
-                For instance, you cannot mock InitialFactoryBuilder of JDK.
+                You can drink some (for the moment) opportunities for Daiquiri :
+                <br/><br/>
+                <ul>
+                    <li>when you cannot mock using your favorite cocktail, such as InitialContextFactory of JDK :
+                        <code>new InitialContext().lookup("Hello")
+                        </code>
+                    </li>
+                </ul>
             </div>
             <div class="span7"><h3>How do I drink it?</h3>
-                <code>
 <pre>
 &lt;dependency&gt;
     &lt;groupId&gt;org.daiquiri&lt;/groupId&gt;
     &lt;artifactId&gt;daiquiri&lt;/artifactId&gt;
-    &lt;version&gt;0.1.1&lt;/version&gt;
+    &lt;version&gt;0.1.2&lt;/version&gt;
     &lt;scope&gt;test&lt;/scope&gt;
 &lt;/dependency
 
@@ -34,7 +65,6 @@
     &lt;url&gt;https://repository-binout.forge.cloudbees.com/release/&lt;/url&gt;
 &lt;/repository&gt;
 </pre>
-                </code>
             </div>
         </div>
     </div>
