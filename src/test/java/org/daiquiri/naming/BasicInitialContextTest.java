@@ -48,7 +48,7 @@ public class BasicInitialContextTest {
         Assert.assertNotNull(mockContext);
     }
 
-    @Test(expectedExceptions = UnsupportedOperationException.class, expectedExceptionsMessageRegExp = "Not supported by org.daiquiri.naming.BasicInitialContext")
+    @Test(expectedExceptions = UnsupportedOperationException.class, expectedExceptionsMessageRegExp = "Not supported by org.daiquiri.naming.BasicContext")
     public void can_be_instantiated_by_factory() throws NamingException {
         Name name = Mockito.mock(Name.class);
         mockContext.lookup(name);

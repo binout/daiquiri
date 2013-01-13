@@ -18,161 +18,167 @@ package org.daiquiri.naming;
 import javax.naming.*;
 import java.util.Hashtable;
 
-public class BasicInitialContext extends InitialContext {
+public class BasicContext implements Context {
 
-    private BasicContext context;
+    private Hashtable<String, Object> environment;
+    private Hashtable<String, Object> namedObjects;
 
-    public BasicInitialContext() throws  NamingException {
-        context = new BasicContext();
+    public BasicContext() throws NamingException {
+        this(new Hashtable<String, Object>()) ;
     }
 
-    public BasicInitialContext(Hashtable<String, Object> environment) throws  NamingException {
-        context = new BasicContext(environment);
+    public BasicContext(Hashtable<String, Object> environment) throws  NamingException {
+        this.environment = environment;
+        this.namedObjects = new Hashtable<String, Object>();
     }
 
     @Override
     public Object lookup(Name name) throws NamingException {
-        return context.lookup(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Object lookup(String name) throws NamingException {
-        return context.lookup(name);
+        if (!namedObjects.containsKey(name)) {
+            throw new NameNotFoundException("No entry for :" + name);
+        }
+        return namedObjects.get(name);
     }
 
     @Override
     public void bind(Name name, Object obj) throws NamingException {
-        context.bind(name, obj);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void bind(String name, Object obj) throws NamingException {
-        context.bind(name, obj);
+        namedObjects.put(name, obj);
     }
 
     @Override
     public void rebind(Name name, Object obj) throws NamingException {
-        context.rebind(name, obj);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void rebind(String name, Object obj) throws NamingException {
-        context.rebind(name, obj);
+        namedObjects.put(name, obj);
     }
 
     @Override
     public void unbind(Name name) throws NamingException {
-        context.unbind(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void unbind(String name) throws NamingException {
-        context.unbind(name);
+        namedObjects.remove(name);
     }
 
     @Override
     public void rename(Name oldName, Name newName) throws NamingException {
-        context.rename(oldName, newName);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void rename(String oldName, String newName) throws NamingException {
-        context.rename(oldName, newName);
+        Object found = lookup(oldName);
+        unbind(oldName);
+        bind(newName, found);
     }
 
     @Override
     public NamingEnumeration<NameClassPair> list(Name name) throws NamingException {
-        return context.list(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public NamingEnumeration<NameClassPair> list(String name) throws NamingException {
-        return context.list(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public NamingEnumeration<Binding> listBindings(Name name) throws NamingException {
-        return context.listBindings(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public NamingEnumeration<Binding> listBindings(String name) throws NamingException {
-        return context.listBindings(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void destroySubcontext(Name name) throws NamingException {
-        context.destroySubcontext(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public void destroySubcontext(String name) throws NamingException {
-        context.destroySubcontext(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Context createSubcontext(Name name) throws NamingException {
-        return context.createSubcontext(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Context createSubcontext(String name) throws NamingException {
-        return context.createSubcontext(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Object lookupLink(Name name) throws NamingException {
-        return context.lookupLink(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Object lookupLink(String name) throws NamingException {
-        return context.lookupLink(name);
+        return lookup(name);
     }
 
     @Override
     public NameParser getNameParser(Name name) throws NamingException {
-        return context.getNameParser(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public NameParser getNameParser(String name) throws NamingException {
-        return context.getNameParser(name);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Name composeName(Name name, Name prefix) throws NamingException {
-        return context.composeName(name, prefix);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public String composeName(String name, String prefix) throws NamingException {
-        return context.composeName(name, prefix);
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
 
     @Override
     public Object addToEnvironment(String propName, Object propVal) throws NamingException {
-        return context.addToEnvironment(propName, propVal);
+        return environment.put(propName, propVal);
     }
 
     @Override
     public Object removeFromEnvironment(String propName) throws NamingException {
-        return context.removeFromEnvironment(propName);
+        return environment.remove(propName);
     }
 
     @Override
     public Hashtable<?, ?> getEnvironment() throws NamingException {
-        return context.getEnvironment();
+        return environment;
     }
 
     @Override
     public void close() throws NamingException {
-        context.close();
+        namedObjects.clear();
     }
 
     @Override
     public String getNameInNamespace() throws NamingException {
-        return context.getNameInNamespace();
+        throw new UnsupportedOperationException("Not supported by org.daiquiri.naming.BasicContext");
     }
-
 }
