@@ -66,6 +66,23 @@
                 <version>1.0-beta-2</version>
             </extension>
         </extensions>
+
+        <!-- Adding license files to artefacts -->
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>${basedir}</directory>
+                <targetPath>META-INF</targetPath>
+                <includes>
+                    <include>LICENSE</include>
+                    <include>NOTICE</include>
+                </includes>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -76,13 +93,42 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
-            <!-- Plugin used to process release using the command line: mvn release:prepare release:perform -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.2.2</version>
             </plugin>
-
+            <plugin>
+                <groupId>com.mycila.maven-license-plugin</groupId>
+                <artifactId>maven-license-plugin</artifactId>
+                <version>1.10.b1</version>
+                <configuration>
+                    <header>src/etc/header.txt</header>
+                    <strictCheck>true</strictCheck>
+                    <excludes>
+                        <exclude>target/**</exclude>
+                        <exclude>.idea/**</exclude>
+                        <exclude>*.iml</exclude>
+                        <exclude>.git/**</exclude>
+                        <exclude>.gitignore</exclude>
+                        <exclude>README.md</exclude>
+                    </excludes>
+                    <properties>
+                        <year>${project.inceptionYear}</year>
+                        <email>binout@gmail.com</email>
+                        <user>Benoit Prioux</user>
+                    </properties>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -164,7 +210,7 @@
     </distributionManagement>
 
     <repositories>
-        <!-- Cloudbees maven repositories for releases and snapshots -->
+        <!-- Cloudbees maven repositories for releases -->
         <repository>
             <id>binout-cloudbees-release</id>
             <name>binout-cloudbees-release</name>
@@ -176,6 +222,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <!-- Cloudbees maven repositories for snapshots -->
         <repository>
             <id>binout-cloudbees-snapshot</id>
             <name>binout-cloudbees-snapshot</name>
