@@ -4,7 +4,7 @@
 
     <groupId>org.daiquiri</groupId>
     <artifactId>daiquiri</artifactId>
-    <version>0.1.2</version>
+    <version>0.2-SNAPSHOT</version>
 
     <name>Daiquiri :: ${project.artifactId} - ${project.packaging}</name>
     <description>Daiquiri provides some test utilities complement java mock framework such as Mockito</description>
