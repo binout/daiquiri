@@ -25,5 +25,6 @@ Release note
 Future
 ------
 
+* Add @MockContext instead of calling of Daiquiri.Naming.mockIntiialContext
 * Manage @Resource annotation using mocked Context
 * Manage lifecycle annotations @PostContruct, @PreDestroy in unit testing
