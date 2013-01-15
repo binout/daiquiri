@@ -16,9 +16,12 @@
 package org.daiquiri.reflect;
 
 import org.daiquiri.Daiquiri;
-import org.daiquiri.exception.DaiquiriException;
+import org.daiquiri.exceptions.DaiquiriException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 public class DaiquiriReflectTest {
 
@@ -35,4 +38,23 @@ public class DaiquiriReflectTest {
         Assert.assertNotNull(s);
         Assert.assertEquals("toto", s);
     }
+
+    @Test
+     public void should_invoke_postConstruct_method() throws DaiquiriException {
+        Cocktail cocktail = new Cocktail();
+        Assert.assertFalse(cocktail.isShaken());
+
+        Daiquiri.Reflect.invokePostConstruct(cocktail);
+        Assert.assertTrue(cocktail.isShaken());
+    }
+
+    @Test
+    public void should_invoke_preDestroy_method() throws DaiquiriException {
+        Cocktail cocktail = new Cocktail();
+        Assert.assertFalse(cocktail.isEmpty());
+
+        Daiquiri.Reflect.invokePreDestroy(cocktail);
+        Assert.assertTrue(cocktail.isEmpty());
+    }
 }
+

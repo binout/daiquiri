@@ -15,11 +15,14 @@
  */
 package org.daiquiri;
 
-import org.daiquiri.exception.DaiquiriException;
+import org.daiquiri.annotations.AnnotationUtils;
+import org.daiquiri.exceptions.DaiquiriException;
 import org.daiquiri.naming.BasicInitialContext;
 import org.daiquiri.naming.DaiquiriInitialContextFactoryBuilder;
 import org.daiquiri.naming.directory.BasicInitialDirContext;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.naming.directory.InitialDirContext;
@@ -38,6 +41,28 @@ public class Daiquiri {
      * All about reflection
      */
     public static class Reflect {
+
+        /**
+         * Invokes methods of object annotated with @PostConstruct
+         * @param object the instance of object
+         * @param <T> the type
+         * @return the same object
+         * @throws DaiquiriException if problems with visibility or security for methods
+         */
+        public static <T> T invokePostConstruct(T object) throws  DaiquiriException{
+            return AnnotationUtils.invokeMethodsWithAnnotation(object, PostConstruct.class);
+        }
+
+        /**
+         * Invokes methods of object annotated with @PreDestroy
+         * @param object the instance of object
+         * @param <T> the type
+         * @return the same object
+         * @throws DaiquiriException if problems with visibility or security for methods
+         */
+        public static <T> T invokePreDestroy(T object) throws  DaiquiriException{
+            return AnnotationUtils.invokeMethodsWithAnnotation(object, PreDestroy.class);
+        }
 
         /**
          * New instance of given class

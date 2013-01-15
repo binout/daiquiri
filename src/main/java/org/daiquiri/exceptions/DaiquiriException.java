@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.daiquiri.exception;
+package org.daiquiri.exceptions;
 
 public class DaiquiriException extends Exception {
 
