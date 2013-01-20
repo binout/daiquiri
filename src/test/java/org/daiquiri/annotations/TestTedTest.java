@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.daiquiri.reflect;
+package org.daiquiri.annotations;
 
 import org.daiquiri.Cocktail;
 import org.daiquiri.Daiquiri;
@@ -21,24 +21,25 @@ import org.daiquiri.exceptions.DaiquiriException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DaiquiriReflectTest {
+public class TestTedTest {
+
+    @Tested
+    private Cocktail cocktail;
+
+    @Tested(postConstruct = true)
+    private Cocktail cocktailWithPostConstruct;
 
     @Test
-     public void should_invoke_postConstruct_method() throws DaiquiriException {
-        Cocktail cocktail = new Cocktail();
+    public void initTestedAnnotation() throws DaiquiriException {
+        Daiquiri.initAnnotations(this);
+        Assert.assertNotNull(cocktail);
         Assert.assertFalse(cocktail.isShaken());
-
-        Daiquiri.Reflect.invokePostConstruct(cocktail);
-        Assert.assertTrue(cocktail.isShaken());
     }
 
     @Test
-    public void should_invoke_preDestroy_method() throws DaiquiriException {
-        Cocktail cocktail = new Cocktail();
-        Assert.assertFalse(cocktail.isEmpty());
-
-        Daiquiri.Reflect.invokePreDestroy(cocktail);
-        Assert.assertTrue(cocktail.isEmpty());
+    public void initTestedAnnotationWithPostConstruct() throws DaiquiriException {
+        Daiquiri.initAnnotations(this);
+        Assert.assertNotNull(cocktailWithPostConstruct);
+        Assert.assertTrue(cocktailWithPostConstruct.isShaken());
     }
 }
-

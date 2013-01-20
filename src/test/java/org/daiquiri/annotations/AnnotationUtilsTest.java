@@ -13,36 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.daiquiri.reflect;
+package org.daiquiri.annotations;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+import org.daiquiri.Daiquiri;
+import org.daiquiri.exceptions.DaiquiriException;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-public class Cocktail {
+public class AnnotationUtilsTest {
 
-    private boolean shaken;
-    private boolean empty;
-
-    public Cocktail() {
-        shaken = false;
-        empty = false;
+    @Test
+    public void can_instantiate() throws DaiquiriException {
+        String s = AnnotationUtils.newInstance(String.class);
+        Assert.assertNotNull(s);
+        Assert.assertEquals("", s);
     }
 
-    public boolean isShaken() {
-        return shaken;
-    }
-
-    public boolean isEmpty() {
-        return empty;
-    }
-
-    @PostConstruct
-    public void init() {
-        shaken = true;
-    }
-
-    @PreDestroy
-    public void destroy() {
-        empty = true;
+    @Test
+    public void can_instantiate_with_param() throws DaiquiriException {
+        String s = AnnotationUtils.newInstance(String.class, "toto");
+        Assert.assertNotNull(s);
+        Assert.assertEquals("toto", s);
     }
 }

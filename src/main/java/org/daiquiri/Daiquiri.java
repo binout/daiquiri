@@ -16,6 +16,7 @@
 package org.daiquiri;
 
 import org.daiquiri.annotations.AnnotationUtils;
+import org.daiquiri.annotations.Tested;
 import org.daiquiri.exceptions.DaiquiriException;
 import org.daiquiri.naming.BasicInitialContext;
 import org.daiquiri.naming.DaiquiriInitialContextFactoryBuilder;
@@ -28,6 +29,7 @@ import javax.naming.NamingException;
 import javax.naming.directory.InitialDirContext;
 import javax.naming.spi.NamingManager;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +38,18 @@ import java.util.List;
  * Main class for Daiquiri utilities
  */
 public class Daiquiri {
+
+    /**
+     * Init Daquiri annotations on test class
+     * @param testClass the instance of test class
+     * @throws DaiquiriException if problems with visibility or security for methods
+     */
+    public static void initAnnotations(Object testClass) throws DaiquiriException {
+        Field[] fields = testClass.getClass().getDeclaredFields();
+        for (Field f : fields) {
+            AnnotationUtils.processTestedAnnotation(testClass, f);
+        }
+    }
 
     /**
      * All about reflection
@@ -49,7 +63,7 @@ public class Daiquiri {
          * @return the same object
          * @throws DaiquiriException if problems with visibility or security for methods
          */
-        public static <T> T invokePostConstruct(T object) throws  DaiquiriException{
+        public static <T> T invokePostConstruct(T object) throws DaiquiriException {
             return AnnotationUtils.invokeMethodsWithAnnotation(object, PostConstruct.class);
         }
 
@@ -64,36 +78,6 @@ public class Daiquiri {
             return AnnotationUtils.invokeMethodsWithAnnotation(object, PreDestroy.class);
         }
 
-        /**
-         * New instance of given class
-         * @param clazz the class to instantiate
-         * @param <T> the type
-         * @param parameters the parameters of constructor
-         * @return a object with type <T> of class clazz
-         * @throws DaiquiriException
-         */
-        public static <T> T newInstance(Class<T> clazz, Object... parameters) throws DaiquiriException {
-            try {
-                if (parameters == null || parameters.length == 0) {
-                    return clazz.newInstance();
-                } else {
-                    List<Class<?>> parameterTypes = new ArrayList<Class<?>>();
-                    for (Object p : parameters) {
-                        parameterTypes.add(p.getClass());
-                    }
-                    Constructor<T> constructor = clazz.getConstructor(parameterTypes.toArray(new Class<?>[0]));
-                    return constructor.newInstance(parameters);
-                }
-            } catch (InstantiationException e) {
-                throw new DaiquiriException(e);
-            } catch (IllegalAccessException e) {
-                throw new DaiquiriException(e);
-            } catch (NoSuchMethodException e) {
-                throw new DaiquiriException(e);
-            } catch (InvocationTargetException e) {
-                throw new DaiquiriException(e);
-            }
-        }
     }
 
     /**

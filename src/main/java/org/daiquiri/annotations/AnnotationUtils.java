@@ -19,8 +19,12 @@ import org.daiquiri.exceptions.DaiquiriException;
 
 import javax.annotation.PostConstruct;
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AnnotationUtils {
 
@@ -41,5 +45,44 @@ public class AnnotationUtils {
             }
         }
         return object;
+    }
+
+    public static void processTestedAnnotation(Object testClass, Field f) throws DaiquiriException {
+        Tested testedAnnotation = f.getAnnotation(Tested.class);
+        if (testedAnnotation != null) {
+            try {
+                Object newInstance = newInstance(f.getType());
+                f.setAccessible(true);
+                f.set(testClass, newInstance);
+                if (testedAnnotation.postConstruct()) {
+                    invokeMethodsWithAnnotation(newInstance, PostConstruct.class);
+                }
+            } catch (IllegalAccessException e) {
+                throw new DaiquiriException(e);
+            }
+        }
+    }
+
+    static <T> T newInstance(Class<T> clazz, Object... parameters) throws DaiquiriException {
+        try {
+            if (parameters == null || parameters.length == 0) {
+                return clazz.newInstance();
+            } else {
+                List<Class<?>> parameterTypes = new ArrayList<Class<?>>();
+                for (Object p : parameters) {
+                    parameterTypes.add(p.getClass());
+                }
+                Constructor<T> constructor = clazz.getConstructor(parameterTypes.toArray(new Class<?>[0]));
+                return constructor.newInstance(parameters);
+            }
+        } catch (InstantiationException e) {
+            throw new DaiquiriException(e);
+        } catch (IllegalAccessException e) {
+            throw new DaiquiriException(e);
+        } catch (NoSuchMethodException e) {
+            throw new DaiquiriException(e);
+        } catch (InvocationTargetException e) {
+            throw new DaiquiriException(e);
+        }
     }
 }
