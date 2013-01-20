@@ -17,31 +17,36 @@ package org.daiquiri.naming;
 
 import org.daiquiri.DaiquiriAnnotations;
 import org.daiquiri.annotations.MockContext;
+import org.mockito.Matchers;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import javax.annotation.Resource;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-public class MockInitialContextWithAnnotationsTest {
+public class MockInitialContextWithMockitoAnnotationsTest {
 
+    @Mock
     @MockContext
     private InitialContext mockContext;
 
-    @Resource(name = "hello")
-    private String message = "Hi Daiquiri";
-
     @BeforeMethod
     public void initAnnotations() {
+        MockitoAnnotations.initMocks(this);
         DaiquiriAnnotations.init(this);
     }
 
     @Test
-    public void can_use_mock_context_and_resource() throws NamingException {
+    public void can_use_daiquiri_and_mockito_context() throws NamingException {
+        String hello = "Hi Mockito !";
+        Mockito.when(mockContext.lookup(Matchers.anyString())).thenReturn(hello);
+
         Context context = new InitialContext();
-        Assert.assertEquals(context.lookup("hello"), message);
+        Assert.assertEquals(context.lookup("hello"), hello);
     }
 }

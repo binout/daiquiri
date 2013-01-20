@@ -24,6 +24,7 @@ import org.daiquiri.naming.directory.BasicInitialDirContext;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.naming.directory.InitialDirContext;
@@ -49,9 +50,8 @@ public class Daiquiri {
          * @param object the instance of object
          * @param <T> the type
          * @return the same object
-         * @throws DaiquiriException if problems with visibility or security for methods
          */
-        public static <T> T invokePostConstruct(T object) throws DaiquiriException {
+        public static <T> T invokePostConstruct(T object) {
             return AnnotationUtils.invokeMethodsWithAnnotation(object, PostConstruct.class);
         }
 
@@ -60,9 +60,8 @@ public class Daiquiri {
          * @param object the instance of object
          * @param <T> the type
          * @return the same object
-         * @throws DaiquiriException if problems with visibility or security for methods
          */
-        public static <T> T invokePreDestroy(T object) throws  DaiquiriException{
+        public static <T> T invokePreDestroy(T object) {
             return AnnotationUtils.invokeMethodsWithAnnotation(object, PreDestroy.class);
         }
 
@@ -74,6 +73,14 @@ public class Daiquiri {
     public static class Naming {
 
         private static DaiquiriInitialContextFactoryBuilder daiquiriBuilder;
+
+        /**
+         * Get current context used by InitialContextFactory
+         * @return null or an instance of context
+         */
+        public static Context getCurrentContext() {
+            return daiquiriBuilder.getContext();
+        }
 
         /**
          * Mock the initial context factory with the given initial context instance

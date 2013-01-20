@@ -19,6 +19,8 @@ import org.daiquiri.Daiquiri;
 import org.daiquiri.exceptions.DaiquiriException;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.naming.directory.InitialDirContext;
@@ -32,7 +34,7 @@ import java.util.List;
 
 public class AnnotationUtils {
 
-    public static <T> T invokeMethodsWithAnnotation(T object, Class<? extends Annotation> annotationClazz) throws DaiquiriException {
+    public static <T> T invokeMethodsWithAnnotation(T object, Class<? extends Annotation> annotationClazz) {
         Method[] methods = object.getClass().getMethods();
         for (Method method : methods) {
             Annotation[] annotations = method.getAnnotations();
@@ -51,7 +53,7 @@ public class AnnotationUtils {
         return object;
     }
 
-    public static void processMockContextAnnotation(Object testClass, Field f) throws DaiquiriException {
+    public static void processMockContextAnnotation(Object testClass, Field f) {
         MockContext contextAnnotation = f.getAnnotation(MockContext.class);
         if (contextAnnotation != null) {
             if (f.getType().isAssignableFrom(InitialContext.class)) {
@@ -89,7 +91,25 @@ public class AnnotationUtils {
         }
     }
 
-    public static void processTestedAnnotation(Object testClass, Field f) throws DaiquiriException {
+    public static void processResourceAnnotation(Object testClass, Field f, Context context) {
+        Resource resourceAnnotation = f.getAnnotation(Resource.class);
+        if (resourceAnnotation != null) {
+            String name = resourceAnnotation.name();
+            if (name != null) {
+                try {
+                    f.setAccessible(true);
+                    Object value = f.get(testClass);
+                    context.bind(name, value);
+                } catch (NamingException e) {
+                    throw new DaiquiriException(e);
+                } catch (IllegalAccessException e) {
+                    throw new DaiquiriException(e);
+                }
+            }
+        }
+    }
+
+    public static void processTestedAnnotation(Object testClass, Field f) {
         Tested testedAnnotation = f.getAnnotation(Tested.class);
         if (testedAnnotation != null) {
             try {
@@ -105,7 +125,7 @@ public class AnnotationUtils {
         }
     }
 
-    static <T> T newInstance(Class<T> clazz, Object... parameters) throws DaiquiriException {
+    static <T> T newInstance(Class<T> clazz, Object... parameters) {
         try {
             if (parameters == null || parameters.length == 0) {
                 return clazz.newInstance();

@@ -26,6 +26,10 @@ public class DaiquiriInitialContextFactoryBuilder implements InitialContextFacto
 
     private Context context;
 
+    public Context getContext() {
+        return this.context;
+    }
+
     public void setContext(Context context) {
         this.context = context;
     }

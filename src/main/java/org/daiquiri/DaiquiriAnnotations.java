@@ -18,6 +18,7 @@ package org.daiquiri;
 import org.daiquiri.annotations.AnnotationUtils;
 import org.daiquiri.exceptions.DaiquiriException;
 
+import javax.naming.Context;
 import java.lang.reflect.Field;
 
 /**
@@ -36,6 +37,10 @@ public class DaiquiriAnnotations {
         for (Field f : fields) {
             AnnotationUtils.processTestedAnnotation(testClass, f);
             AnnotationUtils.processMockContextAnnotation(testClass, f);
+            Context currentContext = Daiquiri.Naming.getCurrentContext();
+            if (currentContext != null) {
+                AnnotationUtils.processResourceAnnotation(testClass, f, currentContext);
+            }
         }
     }
 }

@@ -39,7 +39,7 @@ public class MockInitialContextTest {
     }
 
     @Test
-    public void can_use_mock_dir_context() throws NamingException {
+    public void can_use_mockito_context() throws NamingException {
         String hello = "Hi Mockito !";
         Mockito.when(mockContext.lookup(Matchers.anyString())).thenReturn(hello);
 
