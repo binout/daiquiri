@@ -40,18 +40,6 @@ import java.util.List;
 public class Daiquiri {
 
     /**
-     * Init Daquiri annotations on test class
-     * @param testClass the instance of test class
-     * @throws DaiquiriException if problems with visibility or security for methods
-     */
-    public static void initAnnotations(Object testClass) throws DaiquiriException {
-        Field[] fields = testClass.getClass().getDeclaredFields();
-        for (Field f : fields) {
-            AnnotationUtils.processTestedAnnotation(testClass, f);
-        }
-    }
-
-    /**
      * All about reflection
      */
     public static class Reflect {

@@ -15,9 +15,13 @@
  */
 package org.daiquiri.annotations;
 
+import org.daiquiri.Daiquiri;
 import org.daiquiri.exceptions.DaiquiriException;
 
 import javax.annotation.PostConstruct;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.naming.directory.InitialDirContext;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -45,6 +49,44 @@ public class AnnotationUtils {
             }
         }
         return object;
+    }
+
+    public static void processMockContextAnnotation(Object testClass, Field f) throws DaiquiriException {
+        MockContext contextAnnotation = f.getAnnotation(MockContext.class);
+        if (contextAnnotation != null) {
+            if (f.getType().isAssignableFrom(InitialContext.class)) {
+                f.setAccessible(true);
+                try {
+                    InitialContext mockContext = (InitialContext) f.get(testClass);
+                    if (mockContext != null) {
+                        Daiquiri.Naming.mockInitialContext(mockContext);
+                    } else {
+                        mockContext = Daiquiri.Naming.mockInitialContext();
+                        f.set(testClass, mockContext);
+                    }
+                } catch (NamingException e) {
+                    throw new DaiquiriException(e);
+                } catch (IllegalAccessException e) {
+                    throw new DaiquiriException(e);
+                }
+            }
+            else if (f.getType().isAssignableFrom(InitialDirContext.class)) {
+                f.setAccessible(true);
+                try {
+                    InitialDirContext mockContext = (InitialDirContext) f.get(testClass);
+                    if (mockContext != null) {
+                        Daiquiri.Naming.mockInitialDirContext(mockContext);
+                    } else {
+                        mockContext = Daiquiri.Naming.mockInitialDirContext();
+                        f.set(testClass, mockContext);
+                    }
+                } catch (NamingException e) {
+                    throw new DaiquiriException(e);
+                } catch (IllegalAccessException e) {
+                    throw new DaiquiriException(e);
+                }
+            }
+        }
     }
 
     public static void processTestedAnnotation(Object testClass, Field f) throws DaiquiriException {

@@ -15,31 +15,35 @@
  */
 package org.daiquiri.annotations;
 
-import org.daiquiri.Cocktail;
 import org.daiquiri.DaiquiriAnnotations;
 import org.daiquiri.exceptions.DaiquiriException;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestTedTest {
+import javax.naming.InitialContext;
 
-    @Tested
-    private Cocktail cocktail;
+public class MockContextTest {
 
-    @Tested(postConstruct = true)
-    private Cocktail cocktailWithPostConstruct;
+    @MockContext
+    InitialContext context;
+
+    @MockContext
+    @Mock
+    InitialContext contextWithMockito;
 
     @Test
-    public void initTestedAnnotation() throws DaiquiriException {
+    public void initMockContextAnnotation() throws DaiquiriException {
         DaiquiriAnnotations.init(this);
-        Assert.assertNotNull(cocktail);
-        Assert.assertFalse(cocktail.isShaken());
+        Assert.assertNotNull(context);
     }
 
     @Test
-    public void initTestedAnnotationWithPostConstruct() throws DaiquiriException {
+    public void initMockContextAnnotation_UsingMockito() throws DaiquiriException {
+        MockitoAnnotations.initMocks(this);
         DaiquiriAnnotations.init(this);
-        Assert.assertNotNull(cocktailWithPostConstruct);
-        Assert.assertTrue(cocktailWithPostConstruct.isShaken());
+        Assert.assertNotNull(contextWithMockito);
+        Assert.assertTrue(contextWithMockito.toString().contains("Mockito"));
     }
 }

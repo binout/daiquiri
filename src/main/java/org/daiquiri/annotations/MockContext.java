@@ -13,11 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.daiquiri.exceptions;
+package org.daiquiri.annotations;
 
-public class DaiquiriException extends RuntimeException {
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-    public DaiquiriException(Exception e) {
-        super(e);
-    }
+import static java.lang.annotation.ElementType.FIELD;
+
+@Target( { FIELD })
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface MockContext {
 }
