@@ -8,6 +8,12 @@ More information : [http://binout.github.com/daiquiri/](http://binout.github.com
 
 Examples : [https://github.com/binout/daiquiri-examples](https://github.com/binout/daiquiri-examples)
 
+BuildHive
+---------
+https://buildhive.cloudbees.com/job/binout/job/daiquiri/
+
+[![Build Status](https://buildhive.cloudbees.com/job/binout/job/daiquiri/badge/icon)](https://buildhive.cloudbees.com/job/binout/job/daiquiri/)
+
 Release note
 ------------
 
