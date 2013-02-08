@@ -37,4 +37,5 @@ Release note
 Future
 ------
 
-* Maybe try to mock FileSystem
+* Try to mock FileSystem with java 7 filesystemprovider
+    - http://docs.oracle.com/javase/7/docs/technotes/guides/io/fsp/filesystemprovider.html
