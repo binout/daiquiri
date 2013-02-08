@@ -20,16 +20,16 @@ import javax.annotation.PreDestroy;
 
 public class Cocktail {
 
-    private boolean shaken;
+    private boolean hasGlass;
     private boolean empty;
 
     public Cocktail() {
-        shaken = false;
+        hasGlass = false;
         empty = false;
     }
 
-    public boolean isShaken() {
-        return shaken;
+    public boolean hasGlass() {
+        return hasGlass;
     }
 
     public boolean isEmpty() {
@@ -38,7 +38,7 @@ public class Cocktail {
 
     @PostConstruct
     public void init() {
-        shaken = true;
+        hasGlass = true;
     }
 
     @PreDestroy

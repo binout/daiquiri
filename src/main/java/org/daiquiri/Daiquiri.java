@@ -79,7 +79,7 @@ public class Daiquiri {
          * @return null or an instance of context
          */
         public static Context getCurrentContext() {
-            return daiquiriBuilder.getContext();
+            return daiquiriBuilder == null ? null : daiquiriBuilder.getContext();
         }
 
         /**

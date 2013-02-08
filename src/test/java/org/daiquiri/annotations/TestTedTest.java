@@ -18,6 +18,9 @@ package org.daiquiri.annotations;
 import org.daiquiri.Cocktail;
 import org.daiquiri.DaiquiriAnnotations;
 import org.daiquiri.exceptions.DaiquiriException;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -33,13 +36,13 @@ public class TestTedTest {
     public void initTestedAnnotation() throws DaiquiriException {
         DaiquiriAnnotations.init(this);
         Assert.assertNotNull(cocktail);
-        Assert.assertFalse(cocktail.isShaken());
+        Assert.assertFalse(cocktail.hasGlass());
     }
 
     @Test
     public void initTestedAnnotationWithPostConstruct() throws DaiquiriException {
         DaiquiriAnnotations.init(this);
         Assert.assertNotNull(cocktailWithPostConstruct);
-        Assert.assertTrue(cocktailWithPostConstruct.isShaken());
+        Assert.assertTrue(cocktailWithPostConstruct.hasGlass());
     }
 }

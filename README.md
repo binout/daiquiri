@@ -11,6 +11,12 @@ Examples : [https://github.com/binout/daiquiri-examples](https://github.com/bino
 Release note
 ------------
 
+* daiquiri-0.2 :
+    - add DaiquiriAnnotations
+    - @MockContext : to mock an InitialContext or an InitialDirContext
+    - manage @Resource with @MockContext
+    - @Tested : to instantiate the tested class, @PostConstruct can be called
+
 * daiquiri-0.1.2 :
     - minor changes of signature of Daiquiri.Naming.mockInitialContext and Daiquiri.Naming.mockInitialDirContext
 
@@ -25,6 +31,4 @@ Release note
 Future
 ------
 
-* Add @MockContext instead of calling of Daiquiri.Naming.mockIntiialContext
-* Manage @Resource annotation using mocked Context
-* Manage lifecycle annotations @PostContruct, @PreDestroy in unit testing
+* Maybe try to mock FileSystem

@@ -125,6 +125,7 @@ public class AnnotationUtils {
         }
     }
 
+
     static <T> T newInstance(Class<T> clazz, Object... parameters) {
         try {
             if (parameters == null || parameters.length == 0) {

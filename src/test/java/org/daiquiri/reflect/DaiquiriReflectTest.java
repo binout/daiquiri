@@ -26,10 +26,10 @@ public class DaiquiriReflectTest {
     @Test
      public void should_invoke_postConstruct_method() throws DaiquiriException {
         Cocktail cocktail = new Cocktail();
-        Assert.assertFalse(cocktail.isShaken());
+        Assert.assertFalse(cocktail.hasGlass());
 
         Daiquiri.Reflect.invokePostConstruct(cocktail);
-        Assert.assertTrue(cocktail.isShaken());
+        Assert.assertTrue(cocktail.hasGlass());
     }
 
     @Test
