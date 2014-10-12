@@ -6,8 +6,6 @@ The project is under license [Apache 2.0](http://www.apache.org/licenses/LICENSE
 
 More information : [http://binout.github.com/daiquiri/](http://binout.github.com/daiquiri/)
 
-Examples : [https://github.com/binout/daiquiri-examples](https://github.com/binout/daiquiri-examples)
-
 BuildHive
 ---------
 https://buildhive.cloudbees.com/job/binout/job/daiquiri/
