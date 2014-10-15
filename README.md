@@ -15,6 +15,10 @@ https://buildhive.cloudbees.com/job/binout/job/daiquiri/
 Release note
 ------------
 
+* daiquiri-0.2.1 :
+    - change groupId : io.github.binout
+    - deploy to Maven Central
+
 * daiquiri-0.2 :
     - add DaiquiriAnnotations
     - @MockContext : to mock an InitialContext or an InitialDirContext

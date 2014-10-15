@@ -8,9 +8,9 @@
         <version>9</version>
     </parent>
 
-    <groupId>org.daiquiri</groupId>
+    <groupId>io.github.binout</groupId>
     <artifactId>daiquiri</artifactId>
-    <version>0.2</version>
+    <version>0.2.1</version>
 
     <packaging>jar</packaging>
     <name>Daiquiri :: ${project.artifactId} - ${project.packaging}</name>
